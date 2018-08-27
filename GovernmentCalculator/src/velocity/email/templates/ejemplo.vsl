@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<style>
+		body{
+			padding: 20px;
+			font: 1em Arial;
+			color: #000;
+		}
+		td,th {
+			border: 1px solid #000;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<p><b>
+	Informacion de testeo Velocity
+</b></p><br/>
+<table style=" background-color: #016847; color: white;">
+<tr>
+	
+	<td>NOMBRE</td>
+	<td>APELLIDO</td>
+	<td>CORREO</td>
+</tr>
+#foreach($alert in $CRIS )
+    <tr>
+    	<td style="background-color: white; color: black">$alert.nombre </td>
+        <td style="background-color: white; color: black">$alert.apellido </td>
+        <td style="background-color: white; color: black">$alert.correo </td>
+    </tr>
+#end   
+</table>
+</body>
+</html>

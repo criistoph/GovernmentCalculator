@@ -1,0 +1,39 @@
+
+.panel-inverse>.panel-heading {
+	background: #009591 !important;
+}
+
+#data-table-desplazamientoInstituto tbody tr td:hover{
+	background : #009591 !important;
+	color: #fff !important;
+}
+#data-table-desplazamientoInstituto tbody tr td:hover input{
+	
+	color: #fff !important;
+}
+
+.nav-tabs.nav-tabs-inverse .nav-item.show .nav-link, .nav-tabs.nav-tabs-inverse .nav-link.active, .nav-tabs.nav-tabs-inverse .nav-link.active:focus, .nav-tabs.nav-tabs-inverse .nav-link.active:hover, .nav-tabs.nav-tabs-inverse>li.active>a, .nav-tabs.nav-tabs-inverse>li.active>a:focus, .nav-tabs.nav-tabs-inverse>li.active>a:hover {
+    color: #009591 !important;
+    font-weight: bold !important;
+}
+
+.nav.nav-tabs.nav-tabs-inverse>li>a, .nav.nav-tabs.nav-tabs-inverse>li>a:focus, .nav.nav-tabs.nav-tabs-inverse>li>a:hover, .tab-overflow .nav-tabs-inverse .next-button>a, .tab-overflow .nav-tabs-inverse .prev-button>a {
+    background: #fff !important;
+}
+
+.nav-tabs.nav-tabs-inverse .nav-link:focus, .nav-tabs.nav-tabs-inverse .nav-link:hover, .nav-tabs.nav-tabs-inverse>li>a:focus, .nav-tabs.nav-tabs-inverse>li>a:hover {
+    color: #009591 !important;
+    background: 0 0;
+}
+
+.nav-tabs.nav-tabs-inverse .nav-item.show .nav-link, .nav-tabs.nav-tabs-inverse .nav-link.active, .nav-tabs.nav-tabs-inverse .nav-link.active:focus, .nav-tabs.nav-tabs-inverse .nav-link.active:hover, .nav-tabs.nav-tabs-inverse>li.active>a, .nav-tabs.nav-tabs-inverse>li.active>a:focus, .nav-tabs.nav-tabs-inverse>li.active>a:hover {
+    color: #ffffff !important;
+    font-weight: bold !important;
+    background: #009591 !important;
+}
+
+
+table {
+	font-family: 'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+ 	font-size: 14px !important;
+}
