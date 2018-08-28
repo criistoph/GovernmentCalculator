@@ -2,7 +2,6 @@ package com.ite.government.dao.impl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -194,14 +193,22 @@ public class CalculadoraDaoImpl implements CalculadoraDao{
 	public List<DesplazamientoInstituto> cargarTablaDesplazamiento(Integer idInstitucion) {
 		StringBuffer sql = new StringBuffer();
 		Object[] params = {idInstitucion};
-		sql.append("SELECT DESP.*, PRO.VENTA_FY  FROM CG_INSTITUCION INST,CG_PRODUCTO PRO, CG_INSTITUCION_PRODUCTO INSPRO,CG_DESPLAZAMIENTO DESP  " + 
-				   "WHERE INST.ID_INSTITUCION = INSPRO.ID_INSTITUCION   " + 
-				   "AND PRO.ID_PRODUCTO = INSPRO.ID_PRODUCTO  " + 
-				   "AND DESP.ID_PRODUCTO = PRO.ID_PRODUCTO  " + 
-				   "AND INST.ID_INSTITUCION = ?  ");
-		List<DesplazamientoInstituto> lista = jdbcTemplate.query(sql.toString(), new DesplazamientoMapper(),params);
-		System.out.println(lista);
-		return lista;
+//		sql.append("SELECT DESP.*, PRO.VENTA_FY  FROM CG_INSTITUCION INST,CG_PRODUCTO PRO, CG_INSTITUCION_PRODUCTO INSPRO,CG_DESPLAZAMIENTO DESP  " + 
+//				   "WHERE INST.ID_INSTITUCION = INSPRO.ID_INSTITUCION   " + 
+//				   "AND PRO.ID_PRODUCTO = INSPRO.ID_PRODUCTO  " + 
+//				   "AND DESP.ID_PRODUCTO = PRO.ID_PRODUCTO  " + 
+//				   "AND INST.ID_INSTITUCION = ?  ");
+		
+		sql.append(" SELECT DESP.*, PRO.VENTA_FY  FROM CG_INSTITUCION INST,CG_PRODUCTO PRO, CG_INSTITUCION_PRODUCTO INSPRO,CG_DESPLAZAMIENTO DESP   " + 
+				"				   WHERE INST.ID_INSTITUCION = INSPRO.ID_INSTITUCION    " + 
+				"				   AND PRO.ID_PRODUCTO = INSPRO.ID_PRODUCTO  " + 
+				"				   AND DESP.ID_PRODUCTO = PRO.ID_PRODUCTO   " + 
+				"				   AND INST.ID_INSTITUCION = ? ");
+		 
+		
+		return  jdbcTemplate.query(sql.toString(), new DesplazamientoMapper(),params);
+		
+		
 	}
 	
 	private final class DesplazamientoMapper implements RowMapper<DesplazamientoInstituto>{

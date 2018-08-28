@@ -68,21 +68,20 @@
 				<div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
 					<label>Hospital:
 						<select class="form-control" id="comboInstitucion">
-							<option>Seleccione una opción</option>
 						</select>
 					</label>
 				</div>
 				<div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
 					<label>Producto:
 						<select class="form-control" id="comboProductos">
-							<option>Seleccione una opción</option>
+							
 						</select>
 					</label>
 				</div>
 				<div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
-					<label>Año:
+					<label>A�o:
 						<select class="form-control">
-							<option>Seleccione una opción</option>
+							<option>Seleccione una opci�n</option>
 						</select>
 					</label>
 				</div>
@@ -229,6 +228,7 @@
 								<table id="data-table-ordenCompraMayorista" class="table table-striped table-bordered">
 									<thead>
 										<tr>
+											<th width="1%" data-orderable="false">ID_PRODUCTO</th>
 											<th width="1%" data-orderable="false">ENERO</th>
 											<th class="text-nowrap">FEBRERO</th>
 											<th class="text-nowrap">MARZO</th>

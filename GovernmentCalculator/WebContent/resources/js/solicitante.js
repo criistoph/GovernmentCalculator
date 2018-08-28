@@ -535,6 +535,7 @@ function initTablaOrdenCompraMayorista(institucion){
         	 "t" +
         	 "<'row'<'col-sm-6'i><'col-sm-6'p>>",
 	});
+	tablaOrdenCompraMayorista.column( 0 ).visible( false );
 }
 
 
@@ -933,7 +934,10 @@ function institucionesCombo() {
 		url : 'calculadoraController/cargarComboInstitucion',
 		async : false,
 		success : function(instituciones) {
-
+			$('#comboInstitucion').append($('<option>', {
+				value : 0,
+				text : "Seleccione una opción"
+			}));
 			if (instituciones.length > 0) {
 				$.each(instituciones, function(i, institucion) {
 					$('#comboInstitucion').append($('<option>', {
@@ -958,6 +962,10 @@ function productosCombo(institucion) {
 			idInstitucion : institucion 
 		},
 		success : function(productos) {
+			$('#comboProductos').append($('<option>', {
+				value : 0,
+				text : "Seleccione una opción"
+			}));
 			if (productos.length > 0) {
 				$.each(productos, function(i, producto) {
 					$('#comboProductos').append($('<option>', {
