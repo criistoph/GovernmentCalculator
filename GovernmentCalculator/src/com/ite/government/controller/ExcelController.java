@@ -1,8 +1,6 @@
 package com.ite.government.controller;
 
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,15 +19,15 @@ public class ExcelController {
 
 	@Autowired private ExcelService excelService;
 
-	@RequestMapping(value = "/leerExcel", method = RequestMethod.POST)
-	public @ResponseBody String leerExcel(HttpServletRequest req) {
-		log.info("Entrando al metodo de insertar excel");
-		
-		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) req;
-	    MultipartFile excel = multipartRequest.getFile("excel");
-		
-	    System.out.println(excel);
-	    log.info("El archivo llego a controller " + excel);
-	    return excelService.excel(excel);
-	}
+//	@RequestMapping(value = "/leerExcel", method = RequestMethod.POST)
+//	public @ResponseBody String leerExcel(HttpServletRequest req) {
+//		log.info("Entrando al metodo de insertar excel");
+//		
+//		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) req;
+//	    MultipartFile excel = multipartRequest.getFile("excel");
+//		
+//	    System.out.println(excel);
+//	    log.info("El archivo llego a controller " + excel);
+//	    return excelService.excel(excel);
+//	}
 }
